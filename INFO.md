@@ -1,3 +1,2 @@
-Git is Awesome!
-New line...
-experiment with amend
+Git have wallpapes Raccoon
+Hexlet Rulit
