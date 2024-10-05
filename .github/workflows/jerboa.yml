@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Print Hello from Hexlet
+        uses: hexlet-components/hello-from-hexlet-action@release
       - name: run jest
         run: make jest
       - name: run jest --coverage
