@@ -4,13 +4,18 @@ jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: hexlet-components/hello-from-hexlet-action@release
+      - name: checkout
+        id: checkout
+        uses: actions/checkout@v4
+      - name: Print Hello from Hexlet
+        uses: hexlet-components/hello-from-hexlet-action@release
       - uses: actions/setup-node@4
       with:
         node-version: '18.x'
         cache: 'npm'
+      - name: run install
+        run: make npm install
       - name: run jest
-	      run: make npx jest
+        run: make npx jest
       - name: run coverage
-	      run: make npx jest --coverage
+        run: make npx jest --coverage
